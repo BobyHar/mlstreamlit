@@ -33,13 +33,12 @@ def app():
         st.subheader('Data Frame')
         st.dataframe(df)
 
-        st.write("Distribution of Orders (Dependent variable)")
+      
+        df["ID"].value_counts()
 
-        st.write((df["ID"].value_counts()))
+        df.head()
 
-        st.write(df.head())
-
-        st.write(df.info())
+        df.info()
 
         df.isna().sum()
 
