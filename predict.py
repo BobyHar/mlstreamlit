@@ -76,7 +76,7 @@ def app():
         total = option_mnt_wines + option_mnt_fruit + option_mnt_meat + option_mnt_fish + option_mnt_sweet + option_mnt_gold
         children = option_kidhome + option_teenhome
         
-        if lookup_dict1[option_marital] = 0:
+        if lookup_dict1[option_marital] == 0:
             ppl = 2 + children
         else:
             ppl = 1 + children
