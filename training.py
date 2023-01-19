@@ -214,9 +214,5 @@ def app():
             st.pyplot(plt.show())
 
 
-        plt.figure()
-        sns.jointplot(x=df['Parent'], y=df["TotalSpending"], hue =df["Cluster"], kind="kde", palette=pal)
-        st.pyplot(plt.show())
-
 if __name__=='__main__':
     app()
