@@ -234,14 +234,7 @@ def app():
         plt.figure()
         sns.jointplot(x=df['Parent'], y=df["TotalSpending"], hue =df["Cluster"], kind="kde", palette=pal)
         st.pyplot(plt.show())
-        st.write("coba prediksi")
-        data = [[15, 39, 11, 6, 7, 0, 1, 3, 4, 5, 6, 1, 2, 3, 4, 6, 7, 7, 8, 20, 21]]
-        print(data)
-        st.write(km.predict(data))
-
-        st.write(df_copy.head(50))
-
-        df.head()
+     
 
 if __name__=='__main__':
     app()
