@@ -7,3 +7,4 @@ datetime
 seaborn
 altair
 pandas_profiling
+pickle
