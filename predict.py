@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import pickle
 def app():
+    option_birth = st.sidebar.text_input(
+     'Year Birth ? '
+    )
+    
     option_education = st.sidebar.selectbox(
      'Education? ',
     ('Graduation', 'Master', 'PhD', '2n Cycle', 'Basic'))
@@ -63,9 +67,7 @@ def app():
      'Web Visits Month ? '
     )
    
-    option_age = st.sidebar.text_input(
-     'Age ? '
-    )
+
 
     
 
@@ -87,6 +89,8 @@ def app():
         else:
             parents = 0
         
+        age = 2023 - int(option_birth)
+        
         dict = {'Education':lookup_dict[option_education],
             'Marital_Status':lookup_dict1[option_marital],
             'Income':[option_income],
@@ -103,7 +107,7 @@ def app():
             "NumCatalogPurchases":[option_catalog_purchases],
             "NumStorePurchases":[option_store_purchases],
             "NumWebVisitsMonth":[option_web_visitsmonth],
-            "Age":[option_age],
+            "Age":[age],
             "TotalSpending":[total],
             "Children":[children],
             "PeopleAtHome":[ppl],
