@@ -110,9 +110,6 @@ def app():
             "Parent":[parents]
            }
         prediction_df = pd.DataFrame(dict)
-        
-        st.write("Totalllll")
-        st.write(total)
 
         st.write("Customer details for Propensity prediction")
         st.write(prediction_df)
