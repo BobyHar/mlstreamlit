@@ -63,24 +63,7 @@ def app():
      'Web Visits Month ? '
     )
 
-    option_age = st.sidebar.text_input(
-     'Age ? '
-    )
-
-    option_total_spending = st.sidebar.text_input(
-     'Total Spending ? '
-    )
-
-    option_children = st.sidebar.text_input(
-     'Children ? '
-    )
-
-    option_peopleathome = st.sidebar.text_input(
-     'People At Home ? '
-    )
-    option_parent = st.sidebar.text_input(
-     'Parent'
-    )
+   
 
 
     if st.sidebar.button('Predict the Possibility of the Customer to make a purchase'):
