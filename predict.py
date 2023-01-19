@@ -73,13 +73,13 @@ def app():
         lookup_dict={'Graduation':1, 'Master':1, 'PhD':1, '2n Cycle':0, 'Basic':0}
         lookup_dict1={'Married':0, 'Together':0,'Single':1,'Widow':1,'Alone':1,'YOLO':1,'Absurd':1}
         
-        total = option_mnt_wines + option_mnt_fruit + option_mnt_meat + option_mnt_fish + option_mnt_sweet + option_mnt_gold
-        children = option_kidhome + option_teenhome
+        total = int(option_mnt_wines) + int(option_mnt_fruit) + int(option_mnt_meat) + int(option_mnt_fish) + int(option_mnt_sweet) + int(option_mnt_gold)
+        children = int(option_kidhome) + int(option_teenhome)
         
         if lookup_dict1[option_marital] == 0:
-            ppl = 2 + children
+            ppl = 2 + int(children)
         else:
-            ppl = 1 + children
+            ppl = 1 + int(children)
         
 
         if children > 0:
