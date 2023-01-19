@@ -7,5 +7,5 @@ datetime
 seaborn
 altair
 pandas_profiling
-st-profile-method
+st-profile-report
 training
