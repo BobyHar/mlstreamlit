@@ -9,3 +9,4 @@ altair
 pandas_profiling
 scikit-learn
 streamlit_pandas_profiling
+openpyxl
