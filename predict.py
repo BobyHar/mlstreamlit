@@ -66,14 +66,27 @@ def app():
     option_age = st.sidebar.text_input(
      'Age ? '
     )
+
     
-    total = option_mnt_wines + option_mnt_fruit + option_mnt_meat + option_mnt_fish + option_mnt_sweet + option_mnt_gold
 
     if st.sidebar.button('Predict the Possibility of the Customer to make a purchase'):
         lookup_dict={'Graduation':1, 'Master':1, 'PhD':1, '2n Cycle':0, 'Basic':0}
         lookup_dict1={'Married':0, 'Together':0,'Single':1,'Widow':1,'Alone':1,'YOLO':1,'Absurd':1}
+        
+        total = option_mnt_wines + option_mnt_fruit + option_mnt_meat + option_mnt_fish + option_mnt_sweet + option_mnt_gold
+        children = option_kidhome + option_teenhome
+        
+        if lookup_dict1[option_marital] = 0:
+            ppl = 2 + children
+        else:
+            ppl = 1 + children
+        
 
-
+        if children > 0:
+            parents = 1
+        else:
+            parents = 0
+        
         dict = {'Education':lookup_dict[option_education],
             'Marital_Status':lookup_dict1[option_marital],
             'Income':[option_income],
@@ -92,9 +105,9 @@ def app():
             "NumWebVisitsMonth":[option_web_visitsmonth],
             "Age":[option_age],
             "TotalSpending":[total],
-            "Children":[option_children],
-            "PeopleAtHome":[option_peopleathome],
-            "Parent":[option_parent]
+            "Children":[children],
+            "PeopleAtHome":[ppl],
+            "Parent":[parents]
            }
         prediction_df = pd.DataFrame(dict)
         
