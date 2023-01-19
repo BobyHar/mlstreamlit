@@ -8,3 +8,4 @@ seaborn
 altair
 pandas_profiling
 pickle
+ListedColormapi
