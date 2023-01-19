@@ -4,7 +4,7 @@ import altair as alt
 import numpy as np
 import matplotlib
 import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormapi
+#from matplotlib.colors import ListedColormapi
 import datetime
 
 import pandas_profiling
