@@ -7,4 +7,4 @@ datetime
 seaborn
 altair
 pandas_profiling
-training
+training.py
