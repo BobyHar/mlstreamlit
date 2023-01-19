@@ -62,9 +62,12 @@ def app():
     option_web_visitsmonth = st.sidebar.text_input(
      'Web Visits Month ? '
     )
-
    
-
+    option_age = st.sidebar.text_input(
+     'Age ? '
+    )
+    
+    total = option_mnt_wines + option_mnt_fruit + option_mnt_meat + option_mnt_fish + option_mnt_sweet + option_mnt_gold
 
     if st.sidebar.button('Predict the Possibility of the Customer to make a purchase'):
         lookup_dict={'Graduation':1, 'Master':1, 'PhD':1, '2n Cycle':0, 'Basic':0}
@@ -88,13 +91,15 @@ def app():
             "NumStorePurchases":[option_store_purchases],
             "NumWebVisitsMonth":[option_web_visitsmonth],
             "Age":[option_age],
-            "TotalSpending":[option_total_spending],
+            "TotalSpending":[total],
             "Children":[option_children],
             "PeopleAtHome":[option_peopleathome],
             "Parent":[option_parent]
            }
         prediction_df = pd.DataFrame(dict)
-
+        
+        st.write("Totalllll")
+        st.write(total)
 
         st.write("Customer details for Propensity prediction")
         st.write(prediction_df)
